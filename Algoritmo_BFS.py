@@ -19,3 +19,8 @@ class Grafo:
 
         if not self.direccion:
             self.lista_adyaciencia[nodo2].add((nodo1, peso))
+    
+     # Imprimir la representacion grafica
+    def Mostrar_lista_adyaciencia(self):
+        for llave in self.lista_adyaciencia.keys():
+            print("Nodo", llave, ": ", self.lista_adyaciencia[llave])
