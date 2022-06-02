@@ -12,3 +12,10 @@ class Grafo:
        # Representación gráfica - Lista de adyacencia
         # Usamos un diccionario para implementar una lista de adyacencia
         self.lista_adyaciencia = {nodo: set() for nodo in self.nodos} 
+    
+    # Agregar borde al gráfico
+    def agregar_borde(self, nodo1, nodo2, peso=1 ):
+        self.lista_adyaciencia[nodo1].add((nodo2, peso))
+
+        if not self.direccion:
+            self.lista_adyaciencia[nodo2].add((nodo1, peso))
