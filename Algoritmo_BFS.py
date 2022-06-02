@@ -25,7 +25,7 @@ class Grafo:
         for llave in self.lista_adyaciencia.keys():
             print("Nodo", llave, ": ", self.lista_adyaciencia[llave])
 
-        # Función que imprime el recorrido BFS
+    # Función que imprime el recorrido BFS
     # de un vértice fuente dado. bfs_transversal(int s)
     # atraviesa vértices alcanzables desde s.
     def recorrido(self, iniciar_nodo):
@@ -50,3 +50,26 @@ class Grafo:
                 if siguiente_nodo not in visitado:
                     cola.put(siguiente_nodo)
                     visitado.add(siguiente_nodo)
+
+if __name__ == "__main__":
+
+    #### EJEMPLO #####
+
+    # Crear una instancia de la clase `Graph`
+    # Este gráfico no está dirigido y tiene 5 nodos
+    grafo = Grafo(5, direccion=False)
+
+    # Agregue bordes al gráfico con peso predeterminado = 1
+    grafo.agregar_borde(0, 1)
+    grafo.agregar_borde(0, 2)
+    grafo.agregar_borde(1, 2)
+    grafo.agregar_borde(1, 4)
+    grafo.agregar_borde(2, 3)
+
+    # Print adjacency list in the form node n: {(node, weight)}
+    grafo.Mostrar_lista_adyaciencia()
+
+    print ("A continuación se muestra el primer recorrido en anchura"
+                    " (a partir del vértice 0)")
+    grafo.recorrido(0)
+    print()
