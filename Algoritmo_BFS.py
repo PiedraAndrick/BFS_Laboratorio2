@@ -66,7 +66,7 @@ if __name__ == "__main__":
     grafo.agregar_borde(1, 4)
     grafo.agregar_borde(2, 3)
 
-    # Print adjacency list in the form node n: {(node, weight)}
+    # Imprime la lista de adyacencia del nodo n: {(node, weight)}
     grafo.Mostrar_lista_adyaciencia()
 
     print ("A continuación se muestra el primer recorrido en anchura"
